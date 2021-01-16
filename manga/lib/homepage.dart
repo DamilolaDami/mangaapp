@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:manga/animeuicolors.dart';
+import 'package:manga/detailspage.dart';
 import 'package:manga/models/anime.dart';
 import 'package:manga/models/navbar.dart';
 import 'package:manga/models/recents.dart';
 import 'package:manga/silverheader.dart';
-import 'package:dio/dio.dart';
 import 'package:jikan_api/jikan_api.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
   @override
@@ -242,69 +242,76 @@ class ListTrends extends StatelessWidget {
           ),
           itemBuilder: (_, int index) {
             final anime = trendsData[index];
-            return Padding(
-              padding: const EdgeInsets.only(right: 20),
-              child: SizedBox(
-                height: constraints.maxHeight,
-                width: constraints.maxWidth * .375,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Expanded(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          anime.poster,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Text(
-                      anime.name,
-                      style: Theme.of(context).textTheme.subtitle1.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                    const SizedBox(
-                      height: 7.8,
-                    ),
-                    Row(
+            return GestureDetector(
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (_) => Detailspage()));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 20),
+                  child: SizedBox(
+                    height: constraints.maxHeight,
+                    width: constraints.maxWidth * .375,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        SvgPicture.asset(
-                          'assets/svgs/add.svg',
-                          color: Colors.white,
-                          height: 12,
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              anime.poster,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
                         const SizedBox(
-                          width: 5,
+                          height: 15,
                         ),
                         Text(
-                          ' score: ${anime.score}',
-                          style: Theme.of(context).textTheme.button.copyWith(
+                          anime.name,
+                          style: Theme.of(context).textTheme.subtitle1.copyWith(
                                 color: Colors.white,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.bold,
                               ),
                         ),
                         const SizedBox(
-                          width: 7.5,
+                          height: 7.8,
                         ),
-                        Text(
-                          ' # ${anime.number}',
-                          style: Theme.of(context).textTheme.button.copyWith(
-                                color: AnimeUiForYoutubeColors.cyan,
-                                fontWeight: FontWeight.w600,
-                              ),
-                        ),
+                        Row(
+                          children: [
+                            SvgPicture.asset(
+                              'assets/svgs/add.svg',
+                              color: Colors.white,
+                              height: 12,
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              ' score: ${anime.score}',
+                              style:
+                                  Theme.of(context).textTheme.button.copyWith(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                            ),
+                            const SizedBox(
+                              width: 7.5,
+                            ),
+                            Text(
+                              ' # ${anime.number}',
+                              style:
+                                  Theme.of(context).textTheme.button.copyWith(
+                                        color: AnimeUiForYoutubeColors.cyan,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                            ),
+                          ],
+                        )
                       ],
-                    )
-                  ],
-                ),
-              ),
-            );
+                    ),
+                  ),
+                ));
           },
         );
       }),

@@ -4,12 +4,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:manga/animeuicolors.dart';
 import 'package:manga/homepage.dart';
 import 'package:manga/onboard.dart';
+import 'package:jikan_api/jikan_api.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
