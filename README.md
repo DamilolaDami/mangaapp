@@ -19,7 +19,7 @@
 
  Ui developed by DamiFlutter [![Twitter Follow](https://img.shields.io/twitter/follow/LeanXMolly1.svg?style=social)](https://twitter.com/LeanXMolly1)
 
-#screenshot:
+# Screenshot:
 
 <img src="manga/assets/imagess/mangapics/mangaa.png"/>
 
