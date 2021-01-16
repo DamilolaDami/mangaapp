@@ -272,34 +272,36 @@ class ListTrends extends StatelessWidget {
                     const SizedBox(
                       height: 7.8,
                     ),
-                    Row(
-                      children: [
-                        SvgPicture.asset(
-                          'assets/svgs/add.svg',
-                          color: Colors.white,
-                          height: 12,
-                        ),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          ' score: ${anime.score}',
-                          style: Theme.of(context).textTheme.button.copyWith(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600,
-                              ),
-                        ),
-                        const SizedBox(
-                          width: 7.5,
-                        ),
-                        Text(
-                          ' # ${anime.number}',
-                          style: Theme.of(context).textTheme.button.copyWith(
-                                color: AnimeUiForYoutubeColors.cyan,
-                                fontWeight: FontWeight.w600,
-                              ),
-                        ),
-                      ],
+                    Expanded(
+                      child: Row(
+                        children: [
+                          SvgPicture.asset(
+                            'assets/svgs/add.svg',
+                            color: Colors.white,
+                            height: 12,
+                          ),
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            ' score: ${anime.score}',
+                            style: Theme.of(context).textTheme.button.copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                          ),
+                          const SizedBox(
+                            width: 7.5,
+                          ),
+                          Text(
+                            ' # ${anime.number}',
+                            style: Theme.of(context).textTheme.button.copyWith(
+                                  color: AnimeUiForYoutubeColors.cyan,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 ),
