@@ -1,4 +1,4 @@
-# Manga Reader Ui Made with Flutter :smile:  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)  [![Twitter Follow](https://img.shields.io/twitter/follow/LeanXMolly1.svg?style=social)](https://twitter.com/LeanXMolly1)
+# Manga Reader Ui Made with Flutter :smile:  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)  [![Twitter Follow](https://img.shields.io/twitter/follow/MortyWentMia.svg?style=social)](https://twitter.com/MortyWentMia)
 
 
 ##   you can also buy me coffee 
@@ -17,7 +17,7 @@
 
  ### 👨‍💻  Author
 
- Ui developed by DamiFlutter [![Twitter Follow](https://img.shields.io/twitter/follow/LeanXMolly1.svg?style=social)](https://twitter.com/LeanXMolly1)
+ Ui developed by DamiFlutter [![Twitter Follow](https://img.shields.io/twitter/follow/MortyWentMia.svg?style=social)](https://twitter.com/MortyWentMia)
 
 # Screenshot:
 
